@@ -1,29 +1,53 @@
-import {createContext, useContext, useReducer, useEffect} from "react"
+"use client";
+
+import { createContext, useContext, useReducer, useEffect, useState } from "react";
 import themeReducer from "./themeReducer";
 
 export const ThemeContext = createContext();
 
-// get theme settings from local storage, or use default theme
-const initialThemeState = JSON.parse(localStorage.getItem('themeSettings')) || {primary: 'color-1', background: 'bg-1'}
+export const ThemeProvider = ({ children }) => {
+  const [loaded, setLoaded] = useState(false);
 
-export const ThemeProvider = ({children}) => {
-    const [themeState, dispatchTheme] = useReducer(themeReducer, initialThemeState);
+  const [themeState, dispatchTheme] = useReducer(
+    themeReducer,
+    { primary: "color-1", background: "bg-1" }
+  );
 
-    const themeHandler = (buttonClassName) => {
-        dispatchTheme({type: buttonClassName})
+  useEffect(() => {
+    const saved = localStorage.getItem("themeSettings");
+
+    if (saved && saved !== "undefined" && saved !== "null") {
+      try {
+        const parsed = JSON.parse(saved);
+
+        // ודא שזה באמת אובייקט עם primary/background
+        if (parsed?.primary && parsed?.background) {
+          dispatchTheme({ type: "INIT", payload: parsed });
+        }
+      } catch (err) {
+        console.warn("Invalid JSON in localStorage, resetting themeSettings");
+        localStorage.removeItem("themeSettings");
+      }
     }
 
-    // save theme settings to local storage
-    useEffect(() => {
-        localStorage.setItem('themeSettings', JSON.stringify(themeState))
-    }, [themeState.primary, themeState.background])
+    setLoaded(true);
+  }, []);
 
+  useEffect(() => {
+    if (loaded) {
+      localStorage.setItem("themeSettings", JSON.stringify(themeState));
+    }
+  }, [themeState, loaded]);
 
-    return <ThemeContext.Provider value={{themeState, themeHandler}}>{children}</ThemeContext.Provider>
-}
+  const themeHandler = (buttonClassName) => {
+    dispatchTheme({ type: buttonClassName });
+  };
 
+  return (
+    <ThemeContext.Provider value={{ themeState, themeHandler }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
 
-// custom hook to use our theme context wherever we want in our project
-export const useThemeContext = () => {
-    return useContext(ThemeContext);
-}
+export const useThemeContext = () => useContext(ThemeContext);
