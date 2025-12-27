@@ -1,34 +1,40 @@
-const data = [
-    {
-      id: 1,
-      question: "What do you need to start working on my project?",
-      answer: "It mostly depends on the type of project. But in general, you need a fair idea of what you want, then we can take it from there."
-    },
-    {
-      id: 2,
-      question: "How long will my project take to complete?",
-      answer: "This depends on the complexity of the project, your available, and your payment. Once you have this sorted out, I will give you a completion date."
-    },
-    {
-      id: 5,
-      question: "Is hosting and domain registration inclusive in your pricing?",
-      answer: "No! Hosting and domain is taken care of seperately. You can pay for it or take care of it on your own if you know how to."
-    },
-    {
-      id: 4,
-      question: "How much do you charge for an average website or app?",
-      answer: "Once again, this depends. But my prices are affordable so you're good."
-    },
-    {
-      id: 3,
-      question: "What's your payment plan?",
-      answer: "Payment is divided into 3. An initial 30% upfront payment to get me started once all the details of the projec is set, 40% once the project is completed, and 30% once the project is delivered."
-    },
-    {
-      id: 6,
-      question: "What if the project doesn't turn out good?",
-      answer: "You will be a part of the process from the start. You will know how the whole project is going until the end. And I will make sure to give you the best."
-    }
-  ]
+const faqs = [
+  {
+    id: 1,
+    question: "מה צריך כדי להתחיל עבודה?",
+    answer:
+      "כדי להתחיל אני צריך תמונות של הקירות, גודל החלל, סוג העבודה (צביעה/תיקונים/גרפיקה) והאם יש ריהוט בבית. לאחר מכן אני נותן הצעת מחיר ולו״ז.",
+  },
+  {
+    id: 2,
+    question: "כמה זמן לוקחת צביעה?",
+    answer:
+      "זה תלוי בגודל הבית ובמצב הקירות. אחרי תמונות/ביקור קצר אני נותן זמן ביצוע מדויק.",
+  },
+  {
+    id: 3,
+    question: "האם עושים גם תיקוני קיר לפני צבע?",
+    answer:
+      "כן. כולל סדקים, חורים, שפכטל, שיוף והכנה מלאה כדי שהגימור יהיה חלק ונקי.",
+  },
+  {
+    id: 4,
+    question: "עוזרים לבחור צבעים?",
+    answer:
+      "בטח. אני מייעץ לפי תאורה, ריהוט וסגנון. אפשר גם לעשות טסט קטן על הקיר לפני החלטה סופית.",
+  },
+  {
+    id: 5,
+    question: "איך שומרים על ניקיון בזמן העבודה?",
+    answer:
+      "מכסים רצפה וריהוט, עושים הדבקות ומסיימים עם ניקיון וסדר. המטרה היא תוצאה יפה בלי בלגן.",
+  },
+  {
+    id: 6,
+    question: "מה כולל המחיר?",
+    answer:
+      "המחיר נקבע לפי שטח העבודה, מצב הקירות וסוג הצבע/העיצוב. תקבל הצעת מחיר ברורה מה כולל כדי שלא יהיו הפתעות.",
+  },
+];
 
-  export default data
+export default faqs;

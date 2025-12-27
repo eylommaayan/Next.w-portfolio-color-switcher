@@ -2,54 +2,43 @@ const data = [
   {
     id: 1,
     quote:
-      "It's truly amazing how you did exactly what I want with the little information I gave. You'll be my go-to developer from today. Highly recommend!",
+      "העבודה יצאה מושלמת. הקירות חלקים, הצבע אחיד והבית נראה חדש לגמרי. עבד נקי ומסודר – ממליצה בחום.",
     avatar: "/assets/avatar1.jpg",
-    name: "Nana Ama McBrown",
-    profession: "Actress",
+    name: "נועה לוי",
+    profession: "דירת 4 חדרים",
   },
   {
     id: 2,
     quote:
-      "Good job, Hajia! Right on time! I really like how the project turned out, and my customers like it as well. It was fun collaborating with you.",
+      "עשה לנו גם תיקוני שפכטל וגם צביעה מלאה. עזר לבחור צבע שמתאים לאור בבית והתוצאה פשוט וואו.",
     avatar: "/assets/avatar2.jpg",
-    name: "Ernest Achiever",
-    profession: "Web Developer",
+    name: "אורי כהן",
+    profession: "בית פרטי",
   },
   {
     id: 3,
-    quote: "Impressive work, buddy. Highly recommend!",
-    avatar: "/assets/avatar3.jpg",
-    name: "Daniel Vinyo",
-    profession: "Graphic Designer",
-  },
-  {
-    id: 4,
     quote:
-      "Wow. You finished earlier than you said. Everything's modern and beautifully done to the T. Great profession!",
-    avatar: "/assets/avatar4.jpg",
-    name: "Diana Ayi",
-    profession: "Singer",
+      "ציור קיר בחדר ילדים – יצא מדהים. הילד בעננים והעבודה נעשתה בסבלנות ובדיוק כמו שביקשנו.",
+    avatar: "/assets/avatar3.jpg",
+    name: "שירן מזרחי",
+    profession: "ציור קיר לחדר ילדים",
   },
+
   {
     id: 5,
-    quote: "I like how the app turned out. You are incredible, Hajia.",
+    quote:
+      "חידוש קיר בסלון כולל טקסטורה מיוחדת – התוצאה הרבה מעבר למה שציפינו.",
     avatar: "/assets/avatar5.jpg",
-    name: "Vivian Mensah",
-    profession: "Street Photographer",
+    name: "מאיה בן־דוד",
+    profession: "עיצוב סלון",
   },
   {
     id: 6,
-    quote: "Best developer in the world!",
+    quote:
+      "קיבלנו המלצה ולא התאכזבנו. שירות אדיב, עבודה מקצועית ותוצאה שמרגישים בה בית.",
     avatar: "/assets/avatar6.jpg",
-    name: "Hajia Bintu",
-    profession: "Brand Influencer",
-  },
-  {
-    id: 7,
-    quote: "Keep doing great stuff, dear! Nicely executed!",
-    avatar: "/assets/avatar7.jpg",
-    name: "Nicki Nyarko",
-    profession: "Makeup Artist",
+    name: "רועי אברהם",
+    profession: "צביעה פנימית",
   },
 ];
 

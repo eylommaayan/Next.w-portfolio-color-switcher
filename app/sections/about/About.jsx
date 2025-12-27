@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { HiDownload } from "react-icons/hi";
 import data from "./data";
 import Card from "../../components/Card";
 import "./about.css";
@@ -12,7 +11,7 @@ const About = () => {
           <div className="about__portrait">
             <Image
               src="/assets/about.jpg"
-              alt="About Image"
+              alt="About"
               width={600}
               height={800}
               style={{ width: "100%", height: "auto" }}
@@ -20,8 +19,10 @@ const About = () => {
             />
           </div>
         </div>
+
         <div className="about__right">
-          <h2>About Me</h2>
+          <h2>עלי</h2>
+
           <div className="about__cards">
             {data.map((item) => (
               <Card key={item.id} className="about__card">
@@ -31,21 +32,22 @@ const About = () => {
               </Card>
             ))}
           </div>
+
           <p>
-            Building projects my clients love have always been my passion. Being
-            in the web development industry for over 3 years and serving more
-            than 70 happy clients worldwide, I'm always motivated to do more!
+            אני מתמחה בצביעת בתים, חידוש קירות, תיקוני שפכטל ויצירת גרפיקות קיר
+            שמוסיפות אופי לכל חלל. המטרה שלי פשוטה: להפוך קיר “רגיל” למשהו
+            שמרגישים בו בית.
           </p>
+
           <p>
-            Hi, my name is Hajia Bintu from Accra, Ghana. I'm a full-stack web
-            developer with a Bachelors degree in Computer Science. My top
-            priority is to get your business online the right way, giving you
-            industry-standard design and all the functionality you need to
-            operate smoothly online. Get in touch today with the details of your
-            project let's get started! Check out my resume below!
+            לפני כל עבודה אני עוזר לבחור גוון נכון לפי התאורה והריהוט, דואג
+            להכנה מקצועית של הקיר (ניקוי/שיוף/שפכטל), וצובע בגימור נקי ומדויק.
+            אפשר גם להוסיף ציורי קיר/דוגמאות/טקסטורות לפי סגנון: מודרני, ילדים,
+            בוהו, יוקרתי ועוד.
           </p>
-          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-            Download CV
+
+          <a href="#contact" className="btn primary">
+            קבלו הצעת מחיר
           </a>
         </div>
       </div>

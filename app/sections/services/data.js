@@ -1,23 +1,33 @@
-import {SiAdobexd} from 'react-icons/si'
-import {RiReactjsLine} from 'react-icons/ri'
-import {FaServer} from 'react-icons/fa'
-import {AiFillAppstore} from 'react-icons/ai'
-
+import { FaPaintRoller } from "react-icons/fa";
+import { TbWall } from "react-icons/tb";
+import { MdOutlineFormatPaint } from "react-icons/md";
+import { GiPaintBrush } from "react-icons/gi";
 
 const data = [
-    {
-        id: 1, icon: <SiAdobexd/>, title: 'UI/UX Design', desc: "My designs are modern and intuitive. I use industry-standard rules to make sure your users have fun using your product."
-    },
-    {
-        id: 2, icon: <RiReactjsLine/>, title: 'Frontend Development', desc: "Your product will look good and will be accessible on all devices, including mobile phones, tablets, and desktop."
-    },
-    {
-        id: 3, icon: <FaServer/>, title: 'Backend Development', desc: "The security of your business/product is taken seriously right from the start of the project. I will make sure your website/app is secure from attacks."
-    },
-    {
-        id: 4, icon: <AiFillAppstore/>, title: 'App Development', desc: 'Unlike other developers in the market, I will building an app that runs on both IOS and Android devices without any extra cost to you.'
-    }
-]
+  {
+    id: 1,
+    icon: <FaPaintRoller />,
+    title: "צביעת בתים ודירות",
+    desc: "צביעה פנימית וחיצונית בגימור חלק ונקי, כולל הכנת קירות, תיקונים ושמירה על ניקיון מלא.",
+  },
+  {
+    id: 2,
+    icon: <TbWall />,
+    title: "חידוש קירות ושפכטל",
+    desc: "יישור קירות, סתימת סדקים, תיקוני רטיבות והכנת הקיר לצביעה מושלמת.",
+  },
+  {
+    id: 3,
+    icon: <MdOutlineFormatPaint />,
+    title: "בחירת צבעים והתאמה לחלל",
+    desc: "ייעוץ בבחירת צבעים לפי תאורה, ריהוט וסגנון – כדי שהבית ירגיש נכון.",
+  },
+  {
+    id: 4,
+    icon: <GiPaintBrush />,
+    title: "גרפיקות וציורי קיר",
+    desc: "ציורי קיר, דוגמאות מיוחדות וטקסטורות – לחדרי ילדים, סלון, חנויות ומשרדים.",
+  },
+];
 
-
-export default data
+export default data;
