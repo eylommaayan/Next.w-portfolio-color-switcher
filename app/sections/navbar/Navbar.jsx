@@ -10,7 +10,7 @@ const Navbar = () => {
   const { showModalHandler } = useModalContext();
 
   const handleLogoClick = (e) => {
-    e.preventDefault(); // שלא ינסה ללכת ל-index.html
+    e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -30,7 +30,16 @@ const Navbar = () => {
         <ul className="nav__menu">
           {data.map((item) => (
             <li key={item.id}>
-              <a href={item.link}>{item.title}</a>
+              <a
+                href={item.link}
+                target={item.external ? "_blank" : "_self"}
+                rel={item.external ? "noopener noreferrer" : ""}
+                style={
+                  item.external ? { color: "#ffa200", fontWeight: "bold" } : {}
+                }
+              >
+                {item.title}
+              </a>
             </li>
           ))}
         </ul>
